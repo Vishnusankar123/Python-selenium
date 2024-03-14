@@ -1,0 +1,37 @@
+import time
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+driver = webdriver.Chrome()
+driver.maximize_window()
+driver.implicitly_wait(10)
+driver.get("https://www.tendable.com/")
+driver.find_element(By.XPATH, "//*[text()='Our Story']").click()
+time.sleep(2)
+driver.find_element(By.XPATH, "//*[text()='Our Solution']").click()
+time.sleep(2)
+driver.find_element(By.XPATH, "//*[text()='Why Tendable?']").click()
+time.sleep(2)
+driver.find_element(By.XPATH, "//*[text()='Request A Demo']").click()
+time.sleep(2)
+driver.find_element(By.XPATH, "//*[text()='Contact Us']").click()
+time.sleep(2)
+driver.find_element(By.XPATH, "//button[@data-target='.toggle-163701']").click()
+time.sleep(2)
+driver.find_element(By.XPATH, "(//div[@class='freeform-column ']/input[@id='form-input-fullName'])").send_keys("vishnusankar")
+time.sleep(2)
+driver.find_element(By.XPATH, "//form[@id='contactMarketingPipedrive-163701']//input[@id='form-input-organisationName']").send_keys("GMR Groups")
+time.sleep(2)
+driver.find_element(By.XPATH, "//form[@id='contactMarketingPipedrive-163701']//input[@id='form-input-cellPhone']").send_keys(8317568703)
+time.sleep(2)
+driver.find_element(By.XPATH, "//form[@id='contactMarketingPipedrive-163701']//input[@id='form-input-email']").send_keys("gunapativishnushankar99@gmail.com")
+time.sleep(2)
+driver.find_element(By.XPATH, "//form[@id='contactMarketingPipedrive-163701']//option[@value='Management']").click()
+time.sleep(2)
+driver.find_element(By.XPATH, "//form[@id='contactMarketingPipedrive-163701']//input[@id='form-input-consentAgreed-0']").click()
+time.sleep(2)
+driver.find_element(By.XPATH, "//button[contains(@data-loading-text,'Loading...')][normalize-space()='Submit']").click()
+time.sleep(5)
+driver.quit()
+
+
